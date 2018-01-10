@@ -27,7 +27,7 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
@@ -68,10 +68,20 @@
 			<groupId>org.springframework.restdocs</groupId>
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 
-	<profiles>
+	<!-- <profiles>
 		<profile>
             <id>default</id>
             <activation>
@@ -136,7 +146,7 @@
             </build>			
 		</profile>
 		
-	</profiles>
+	</profiles> -->
 
 	<build>
 		<plugins>
@@ -144,13 +154,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
 				<configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-			</plugin>			
+			</plugin>			 -->
 		</plugins>
 	</build>
 
