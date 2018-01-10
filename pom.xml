@@ -23,6 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<version.war.plugin>2.3</version.war.plugin>
+		<version.surefire.plugin>2.10</version.surefire.plugin>
 	</properties>
 
 	<dependencies>
@@ -41,12 +42,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>			
 		</dependency>
 
 		<dependency>
@@ -102,17 +97,23 @@
 			<properties>
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-web</artifactId>
+					<exclusions>
+						<exclusion>
+							<groupId>org.springframework.boot</groupId>
+							<artifactId>spring-boot-starter-tomcat</artifactId>
+						</exclusion>
+					</exclusions>			
+				</dependency>
+			</dependencies>
 			<build>
                 <plugins>
 					<plugin>
 						<groupId>org.springframework.boot</groupId>
 						<artifactId>spring-boot-maven-plugin</artifactId>
-						<exclusions>
-							<exclusion>
-								<groupId>org.springframework.boot</groupId>
-								<artifactId>spring-boot-starter-tomcat</artifactId>
-							</exclusion>
-						</exclusions>			
 					</plugin>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
