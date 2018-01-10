@@ -16,9 +16,4 @@ public class MinishiftDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MinishiftDemoApplication.class, args);
 	}
-
-	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(MinishiftDemoApplication.class);
-    }
 }
