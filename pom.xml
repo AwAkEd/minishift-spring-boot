@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.entelgydigital</groupId>
-	<artifactId>minetad-demo</artifactId>
+	<artifactId>minishift-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>minetad-demo</name>
-	<description>Demo project for Minetad using Minishift</description>
+	<name>minishift-demo</name>
+	<description>Spring-Boot demo project using Minishift</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
