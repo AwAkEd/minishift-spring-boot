@@ -9,6 +9,6 @@ public class HelloController {
 
     @RequestMapping("hello")
     public String sayHello(){
-        return ("Hello, SpringBoot on Wildfly");
+        return ("Hello, SpringBoot running on Wildfly over Minishift!!");
     }
 }
